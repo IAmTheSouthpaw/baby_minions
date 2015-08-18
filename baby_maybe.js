@@ -70,9 +70,9 @@ if (harvester_count <= (builder_count || guard_count || ranged_guard_count))
 	for (var i in Game.spawns)
 	{
 		var possible_spawn = Game.spawns[i];
-		if (possible_spawn.canCreateCreep( [WORK, MOVE, CARRY] , 'Harvester' + (harvester_count + 1)) == OK)
+		if (possible_spawn.canCreateCreep( [WORK, MOVE, CARRY] , undefined, {role: 'harvester'}) == OK)
 		{
-			possible_spawn.createCreep( [WORK, MOVE, CARRY] , 'Harvester' + (harvester_count + 1));
+			possible_spawn.createCreep( [WORK, MOVE, CARRY] , undefined, {role: 'harvester'});
 		}
 	}
 }
