@@ -6,6 +6,7 @@ var ranged_guard_count = 0;
 var harvester = require('harvester');
 var builder = require('builder');
 var guard = require('guard');
+var ranged_guard = require('ranged_guard');
 //var population_manager = require('population_manager')();
 
 //population_manager.check_population();
@@ -105,6 +106,11 @@ for(var name in Game.creeps)
 	if(creep.memory.role == 'guard') 
 	{
 		guard(creep);
+	}
+	
+	if(creep.memory.role == 'ranged_guard')
+	{
+	    ranged_guard(creep);
 	}
 
 }
